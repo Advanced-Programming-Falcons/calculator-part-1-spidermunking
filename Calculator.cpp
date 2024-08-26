@@ -16,7 +16,10 @@ int main(void){
             num3 = 1
         // user enters a number
         }
-        cout << "Please enter an opperator ( +, -, *, /, ^, (to end) =)" << endl;
+        cout << "Please enter an opperator" << endl;
+        cout << "(addition)+ (subraction)-" << endl;
+        cout << "(multiplication)* (division)/" << endl;
+        cout << "(Power)^ (root)< (to end)=" << endl;
         cin >> op;
         // user enters an operator
         cout << "please enter another number to use with the operator" << endl;
@@ -26,21 +29,31 @@ int main(void){
         
         if (op == '+') {
             num = num + num2;
+            //addition
         }
         else if (op == '-'){
             num = num - num2;
+            //subtraction
         }
         else if (op == '*'){
             num = num * num2;
+            //multiplication
         }
         else if (op == '/'){
             num = num / num2;
+            //devision
         }
         else if (op == '^'){
             num = pow(num,num2);
+            //power
+        }
+        else if (op == '<'){
+            num = pow(num,1/num2);
+            //square root
         }
         else if (op == '='){
             loop = 0;
+            //ends loop
         }
         cout << num << endl;
         /* 
