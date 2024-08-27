@@ -53,6 +53,7 @@ int main(void){
         }
         else if (op == '='){
             loop = 0;
+            cout << num;
             //ends loop
         }
         cout << num << endl;
