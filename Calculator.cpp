@@ -2,20 +2,22 @@
 #include <cmath>
 
 using namespace std;
-int num = 0;
-int num2 = 0;
-int num3 = 0;
+float num = 0;
+float num2 = 0;
+int num3 = 1;
+float ans = 0;
 char op = 0;
 int loop = 1;
-
+// sets the variables to such and such
 int main(void){
     while(loop == 1){
-        if (num3 == 0){
-            cout << "Please enter a number" << endl;
-            cin >> num;
-            num3 = 1
-        // user enters a number
+        if (num3 == 1){
+        cout << "Please enter a number" << endl;
+        cin >> num;
+        num3 = 0;
         }
+        // user enters a number
+        
         cout << "Please enter an opperator" << endl;
         cout << "(addition)+ (subraction)-" << endl;
         cout << "(multiplication)* (division)/" << endl;
@@ -25,30 +27,29 @@ int main(void){
         cout << "please enter another number to use with the operator" << endl;
         cin >> num2;
         // user enters another number to use with operator
-       
         
         if (op == '+') {
-            num = num + num2;
+            ans = num + num2;
             //addition
         }
         else if (op == '-'){
-            num = num - num2;
+            ans = num - num2;
             //subtraction
         }
         else if (op == '*'){
-            num = num * num2;
+            ans = num * num2;
             //multiplication
         }
         else if (op == '/'){
-            num = num / num2;
+            ans = num / num2;
             //devision
         }
         else if (op == '^'){
-            num = pow(num,num2);
+            ans = pow(num,num2);
             //power
         }
         else if (op == '<'){
-            num = pow(num,1/num2);
+            ans = pow(num, (1 / num2));
             //square root
         }
         else if (op == '='){
@@ -56,7 +57,9 @@ int main(void){
             cout << num;
             //ends loop
         }
-        cout << num << endl;
+        cout << "your number is " << ans << endl;
+        num = ans;
+        
         /* 
             this part above is what go's 
             through and does the calculations, 
