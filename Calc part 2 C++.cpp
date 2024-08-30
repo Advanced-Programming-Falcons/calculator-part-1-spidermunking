@@ -1,9 +1,14 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <list>
 
 using namespace std;
-void history();
+void history(); // function
+
+//lists
+list <int> numbers = {};
+list <char> opp = {};
 
 double num = 0;
 double num2 = 0;
@@ -46,6 +51,12 @@ int main(void){
             op = ' ' ;
         break;
         }
+
+        numbers.push_back(num);
+        numbers.push_back(num2);
+        numbers.push_back(ans);
+        opp.push_back(op);
+        
         cout << num << op << num2 << "=" << ans << endl;
         history();
         
